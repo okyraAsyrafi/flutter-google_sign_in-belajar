@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "982157457475",
+    "project_id": "goggle-signin-flutter",
+    "storage_bucket": "goggle-signin-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982157457475:android:acd8694d1d7959a91ebcf6",
+        "android_client_info": {
+          "package_name": "com.example.google_sign_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982157457475-m6enrofc7c4d55jhpggvhjmjon7704vs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAElags6T4QwCkCQg4RMFVenaaDUg98EtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982157457475-m6enrofc7c4d55jhpggvhjmjon7704vs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
