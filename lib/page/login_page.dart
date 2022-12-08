@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_sign_flutter/provider/google_sign_in.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -18,12 +20,12 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Spacer(),
-            FlutterLogo(
+            const Spacer(),
+            const FlutterLogo(
               size: 150,
             ),
-            Spacer(),
-            Align(
+            const Spacer(),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 'Hey There,\nWelcome Back',
@@ -33,33 +35,38 @@ class _LoginPageState extends State<LoginPage> {
                     color: Colors.white),
               ),
             ),
-            SizedBox(height: 8),
-            Align(
+            const SizedBox(height: 8),
+            const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 'Login to your account to continue',
                 style: TextStyle(fontSize: 16, color: Colors.grey),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             ElevatedButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  final provider =
+                      Provider.of<GoogleSignInProvider>(context, listen: false);
+
+                  provider.googleLogin();
+                },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,
                   onPrimary: Colors.black,
-                  minimumSize: Size(double.infinity, 50),
+                  minimumSize: const Size(double.infinity, 50),
                 ),
-                label: Text(
+                label: const Text(
                   'Sign Up With Google',
                   style: TextStyle(color: Colors.black),
                 ),
-                icon: FaIcon(
+                icon: const FaIcon(
                   FontAwesomeIcons.google,
                   color: Colors.red,
                 )),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             RichText(
-              text: TextSpan(
+              text: const TextSpan(
                 text: "Already have an account?",
                 children: [
                   TextSpan(
@@ -71,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextStyle(fontSize: 16, color: Colors.grey),
               ),
             ),
-            Spacer(),
+            const Spacer(),
           ],
         ),
       ),
